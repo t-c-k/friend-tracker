@@ -13,11 +13,15 @@ body {
   margin: 0;
 }
 
-div {
+.container {
   max-width: 600px;
-  min-height: 100%;
+  height: 800px;
   margin: 0 auto;
   background: orange;
 
   padding: 10px;
+}
+
+.goodbye {
+  text-align: center;
 }
