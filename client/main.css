@@ -1,7 +1,12 @@
+html {
+  height: 100vh;
+}
+
 body {
   padding: 10px;
   font-family: sans-serif;
-  background: rgb(222, 222, 222);
+  height: 100vh;
+  background:  linear-gradient(to bottom, rgb(242, 192, 255), rgb(255, 255, 255));
 
   position: absolute;
   top: 0;
@@ -15,9 +20,9 @@ body {
 
 .container {
   max-width: 600px;
-  height: 800px;
+  min-height: 100vh;
   margin: 0 auto;
-  background: orange;
+  background: linear-gradient(to bottom, rgb(206, 8, 255), rgb(239, 173, 255));
 
   padding: 10px;
 }

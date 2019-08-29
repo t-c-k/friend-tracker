@@ -49,5 +49,6 @@ class FriendData extends Component {
 export default InfoContainer = withTracker(() => {
     return {
         friends: Friends.find().fetch(),
+        numberOfFriends: Friends.find().count(),
     };
 })(FriendData);
