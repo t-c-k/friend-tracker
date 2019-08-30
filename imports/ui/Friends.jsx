@@ -4,6 +4,9 @@ import { withTracker } from 'meteor/react-meteor-data';
 import Friends from '../api/friends';
 
 class FriendData extends Component {
+
+    noOfFriends = this.props.friends.numberOfFriends;
+
     render() {
         const friends = this.props.friends.map(
             friend => this.makeFriend(friend)
@@ -22,7 +25,7 @@ class FriendData extends Component {
             </div>
         );
     }
-
+    
     makeFriend(friend) {
         return (
             <li key={friend._id}>{friend.firstName} {friend.lastName}</li>
