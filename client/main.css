@@ -6,7 +6,7 @@ body {
   padding: 10px;
   font-family: sans-serif;
   height: 100vh;
-  background:  linear-gradient(to bottom, rgb(242, 192, 255), rgb(255, 255, 255));
+  background:  linear-gradient(to bottom, rgb(198, 237, 255), rgb(255, 255, 255));
 
   position: absolute;
   top: 0;
@@ -22,9 +22,54 @@ body {
   max-width: 600px;
   min-height: 100vh;
   margin: 0 auto;
-  background: linear-gradient(to bottom, rgb(206, 8, 255), rgb(239, 173, 255));
+  background: white;
+  position: relative;
 
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.container h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -10px;
+  width: 600px;
+  padding: 5px 10px;
+
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(to bottom, rgb(70, 122, 182), rgb(93, 147, 207))
+}
+
+.container p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: -10px;
+  width: 600px;
+  padding: 5px 10px;
+
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(to bottom, rgb(93, 147, 207), rgb(123, 181, 246))
+}
+
+.welcome {
+  background: linear-gradient(to bottom, rgb(53, 85, 173), rgb(70, 122, 182));
+  width: 600px;
+  height: 50px;
+  margin-left: -10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: white;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-top: 25px;
 }
 
 .goodbye {

@@ -5,7 +5,7 @@ import Goodbye from './Goodbye.jsx';
 
 const App = () => (
   <div className="container">
-    <h1>Welcome to Friend Tracker!</h1>
+    <h1 className="welcome">Welcome to Friend Tracker!</h1>
     <Hello />
     <Friends />
     <Goodbye className="goodbye"/>
