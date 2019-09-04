@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import InfoContainer from './Friends.jsx';
+import { withTracker } from 'meteor/react-meteor-data';
+import Friends from '../api/friends';
 
-export default class Hello extends Component {
-  render() {
-    return (
-      <div>
-        <p>Use this to keep track of all the many friends you undoubtedly have.</p>
-        <p>You currently have {InfoContainer.numberOfFriends}</p>
-      </div>
-    );
-  }
+class HelloData extends Component {
+
+	render() {
+		return (
+			<div>
+				<h4>Use this to track how many friends you undoubtedly have!</h4>
+        <p>You currently have {this.props.numberOfFriends} friends.</p>
+			</div>
+		);
+	}
 }
+
+export default HelloContainer = withTracker(() => {
+	return {
+    numberOfFriends: Friends.find().count(),
+	};
+})(HelloData);
