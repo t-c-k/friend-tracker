@@ -13,13 +13,13 @@ class FriendData extends Component {
 		return (
 			<div>
 				<h2>Friends</h2>
-				<ul>{ friends }</ul>
 				<h5>Add new friends:</h5>
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<input type="text" ref="firstNameInput" placeholder="First Name" />
 					<input type="text" ref="lastNameInput" placeholder="Last Name" />
 					<button type="submit">Add</button>
 				</form>
+				<ul>{ friends }</ul>
 			</div>
 		);
 	}
@@ -49,6 +49,6 @@ class FriendData extends Component {
 
 export default InfoContainer = withTracker(() => {
 	return {
-		friends: Friends.find().fetch(),
+		friends: Friends.find({}, { sort: {lastName: 1 } }).fetch(),
 	};
 })(FriendData);

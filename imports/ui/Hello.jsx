@@ -8,7 +8,7 @@ class HelloData extends Component {
 		return (
 			<div>
 				<h4>Use this to track how many friends you undoubtedly have!</h4>
-        <p>You currently have {this.props.numberOfFriends} friends =)</p>
+        <p>You currently have {this.props.numberOfFriends} friends</p>
 			</div>
 		);
 	}
