@@ -26,9 +26,22 @@ class FriendData extends Component {
 	
 	makeFriend(friend) {
 		return (
-			<li key={friend._id}>{friend.firstName} {friend.lastName}</li>
+			<li key={friend._id}>
+				<button className="delete" onClick={this.deleteThisFriend.bind(this, friend.firstName)}>delete</button>
+				<span ref="fullName">{friend.firstName} {friend.lastName}</span>
+			</li>
 		);
 	}
+
+	deleteThisFriend(fName) {
+		// var doc = MyCollection.findOne({ someName: someValue });
+		// MyCollection.update({ _id: doc._id }, {$set:{something:true}});
+
+		console.log(fName);
+		var f = Friends.findOne({ firstName: fName });
+		Friends.remove({ _id:f._id });
+	}
+
 
 	handleSubmit(event) {
 		event.preventDefault();
