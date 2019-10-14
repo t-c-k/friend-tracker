@@ -15,7 +15,7 @@ class FriendData extends Component {
 				<h2>Friends</h2>
 				<h5>Add new friends:</h5>
 				<form onSubmit={this.handleSubmit.bind(this)}>
-					<input type="text" ref="firstNameInput" placeholder="First Name" />
+					<input type="text" ref="firstNameInput" id="firstNameInput" placeholder="First Name" />
 					<input type="text" ref="lastNameInput" placeholder="Last Name" />
 					<button type="submit">Add</button>
 				</form>
@@ -27,8 +27,8 @@ class FriendData extends Component {
 	makeFriend(friend) {
 		return (
 			<li key={friend._id}>
-				<button className="delete" onClick={this.deleteThisFriend.bind(this, friend.firstName)}>delete</button>
 				<span ref="fullName">{friend.firstName} {friend.lastName}</span>
+				<button className="delete" onClick={this.deleteThisFriend.bind(this, friend.firstName)}>x</button>
 			</li>
 		);
 	}
@@ -57,6 +57,8 @@ class FriendData extends Component {
 
 		ReactDOM.findDOMNode(this.refs.firstNameInput).value = '';
 		ReactDOM.findDOMNode(this.refs.lastNameInput).value = '';
+
+		document.getElementById("firstNameInput").focus();
 	}
 }
 

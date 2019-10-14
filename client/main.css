@@ -86,3 +86,10 @@ li {
 .goodbye {
   text-align: center;
 }
+
+.delete {
+  float: right;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
