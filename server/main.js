@@ -29,3 +29,5 @@ Meteor.startup(() => {
     );
   }
 });
+
+import '/imports/api/meals/methods';
